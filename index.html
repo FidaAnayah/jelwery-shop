@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRO - Jewelry Shop</title>
+    <link rel="shortcut icon" href="assets/img/logo.jpeg">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- bootsrtap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+      <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <!-- import slick  -->
+      <link rel="stylesheet" href="assets/css/slick.min.css">
+      <!-- import slick theme -->
+      <link rel="stylesheet" href="assets/css/slick-theme.min.css">
+      <link rel="stylesheet" href="assets/css/style.min.css">
+      <link rel="stylesheet" href="assets/css/style_responsive.min.css">
+  
+   
+</head>
+<body onload="dontShowAgain()">
+
+   <!-- start header -->
+   <header>
+    
+    <!-- top header -->
+    <nav class="navbar navbar-expand-lg bg-light header_top">
+      <div class="container-fluid p-4 ">
+        <div class="">
+          <div class="welcome_text">
+             <p>Welcome <span id="login-name"></span></p>
+          </div>
+      </div>
+      <div class="">
+        <div>
+          <div class="logo">
+              <a href="index.html">
+                <div class="logo-img-width ">
+                  <img src="assets/img/logo.webp" alt="logo">
+                </div>
+              </a>
+          </div>
+        </div>
+       
+      </div>
+      
+        <div class=" top_right collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-4 mb-lg-0 ">
+           
+            <li class="nav-item dropdown languages">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                English
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">French</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Germany</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Arabic</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown My-account">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                My Account
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">My Account</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">My cart</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">wishing list</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- end top header -->
+    <!-- Middle header -->
+    <div class="header_middel">
+      <div>
+          <div class="row align-items-center ">
+              <div class="col-lg-5 home-width">
+                  <div class="home_contact" id="weatherBox">
+                      <div class="weather_box">
+                          <p>Weather</p>
+                          <div class="weather-search">
+                             <input type="text" class="form-control search-bar" placeholder="city name">
+                             <button class="search-weather-btn"><i class="fa-solid fa-magnifying-glass search_btn"></i></button>
+                          </div>
+                      </div>
+                      <div class="weather_box">
+                          <p class="ms-xl-3">weather in <span id="city"></span></p>
+                          <div > <p class="temp ms-xl-3"></p> <span> &#8451;</span></div>
+                          <div class="d-flex" style="align-items:center;">
+                           <img src="" alt="weather description" class="weather-icon">
+                           <div class="description">sunny</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-2 col-md-3 col-4 ms-xl-2 ps-xl-5">
+                <div class="d-flex">
+                  <div class="logo">
+                      <a href="index.html">
+                        <div class="logo-img-width">
+                          <img src="assets/img/logo.webp" alt="">
+                        </div>
+                      </a>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="col-lg-5 col-md-7 col-6 middel-right-width">
+                  <div class="middel_right">
+                      <div class="search_btn">
+                          <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                          <div class="dropdown_search">
+                              <form action="#">
+                                  <input placeholder="Search product..." type="text">
+                                  <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                              </form>
+                          </div>
+                      </div>
+                      <div class="cart_link" id="miniCartLink">
+                          <a href="#"><i class="fa-solid fa-cart-shopping"></i>
+                            <span class="cart_text_quantity"> $138.00</span> 
+                            <i class="fa fa-angle-down"></i></a>
+                          <span class="cart_quantity">2</span>
+                          <!--mini cart-->
+                           <div class="minicart" id="miniCart">
+                                <div class="cart_item">
+                                 <div class="cart_img">
+                                     <a href="#"><img src="assets/img/product.webp" alt=""></a>
+                                 </div>
+                                  <div class="cart_info">
+                                      <a href="#">Letraset animal</a>
+                                      <span class="quantity">Qty: 1</span>
+                                      <span class="price_cart">$60.00</span>
+                                  </div>
+                                  <div class="cart_remove">
+                                      <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                                  </div>
+                              </div>
+                              <div class="cart_item">
+                                 <div class="cart_img">
+                                     <a href="#"><img src="assets/img/product2 (1).webp" alt=""></a>
+                                 </div>
+                                  <div class="cart_info">
+                                      <a href="#">Natural passages</a>
+                                      <span class="quantity">Qty: 1</span>
+                                      <span class="price_cart">$69.00</span>
+                                  </div>
+                                  <div class="cart_remove">
+                                      <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                                  </div>
+                              </div>
+                              <div class="cart_total">
+                                  <span>Subtotal:</span>
+                                  <span>138.00</span>
+                              </div> 
+                              <div class="mini_cart_footer">
+                                 <div class="cart_button">
+                                      <a href="cart.html">View cart</a>
+                                  </div>
+                    
+                              </div>
+                              
+                          </div>
+                          <!--mini cart end-->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+     <!-- end Middle header -->
+<!-- sticky top -->
+<div class="header_bottom p-lg-2">
+  <div class="container">
+   <input type="checkbox" id="nav-toggle" class="nav-toggle" > 
+    
+  <ul class="nav justify-content-center" id="primary-nav" >
+    <li class="nav-item">
+      <a class="nav-link homeLink" href="index.html">Home</a>
+    </li>
+    <li class="nav-item dropdown languages">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Pages
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="index.html">Rings Shop</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="index watch.html">Watches Shop</a></li>
+      </ul>
+    </li>
+       <li class="nav-item">
+      <a class="nav-link" href="about.html">About Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="contact.html">Contact Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="login.html">Login</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#weatherBox">Weather</a>
+    </li>
+    <li class="nav-item dropdown languages">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Admin Pages
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="login-table.html">Login Table</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="productone.html">Watches Crud</a></li>
+        <li><a class="dropdown-item" href="producttwo.html">Rings Crud</a></li>
+      </ul>
+    </li>
+  </ul>
+
+<label for="nav-toggle" class="nav-toggle-lable">
+  <span><i class="fa-solid fa-bars"></i></span>
+</label>
+</div>
+</div>
+<!-- end sticky top -->
+   </header>
+    <!-- end header -->
+    <!-- start image slider -->
+    <header class="slide ">
+      <div class="cards mb-0">
+        <div class="slide-item ">
+        <img src="assets/img/slider6.webp" class="slider-img w-100 ">
+        <div class="slide-description">
+        <p class="fs-4 text-capitalize ">exclusive offer-10% off this week</p>
+        <h2 class="slider-p fs-1 text-capitalize">Rings For Women</h2>
+        <p class="fs-4">starting at <span class="price-slider fs-4">$2.199.0<span class="fs-5">0</span></span></p>
+        <a class="headerbtn" href="Shop.html">shopping now</a>
+        </div>
+        </div>
+    
+        <div class="slide-item ">
+          <img src="assets/img/slider5.webp" class="slider-img w-100">
+          <div class="slide-description">
+          <p class="fs-4 text-capitalize ">exclusive offer-10% off this week</p>
+          <h2 class="slider-p fs-1 text-capitalize">Rings For Women</h2>
+          <p class="fs-4">starting at <span class="price-slider fs-4">$2.199.0<span class="fs-5">0</span></span></p>
+          <a class="headerbtn" href="Shop.html">shopping now</a>
+         
+        </div>
+          </div>
+    
+         </div> 
+    
+      </header>
+     <!-- end image slider -->
+     <!-- start shipping section -->
+     <section class="shipping">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="single-shipping">
+              <div >
+               <span class="shipping-icone"><i class="fa-solid fa-earth-africa"></i></span> 
+              </div>
+              <div class="shipping-content">
+                 <h3>free shipping</h3>
+                 <p>free shipping on all order</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="single-shipping">
+              <div >
+               <span class="shipping-icone"><i class="fa-solid fa-circle-check"></i></span> 
+              </div>
+              <div class="shipping-content">
+                 <h3>Money Return</h3>
+                 <p>Back guarantee under 7 days</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="single-shipping">
+              <div >
+               <span class="shipping-icone"><i class="fa-solid fa-bell"></i></span> 
+              </div>
+              <div class="shipping-content">
+                 <h3>Member Discount</h3>
+                 <p>Onevery order over $120.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="single-shipping">
+              <div >
+               <span class="shipping-icone"><i class="fa-solid fa-clock"></i></span> 
+              </div>
+              <div class="shipping-content">
+                 <h3>Online Support</h3>
+                 <p>Support online 24 hours a day</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+   <!-- end shipping section -->
+
+ <!-- start Product area -->
+ <section>
+  <div class="container">
+    <div class="product-tab-button">
+
+      <ul class="nav" role="tablist">
+        <li>
+            <a class="active" data-bs-toggle="tab" href="#featured" role="tab" aria-controls="featured" aria-selected="true">Featured</a>
+        </li>
+        <li>
+            <a data-bs-toggle="tab" href="#arrivals" role="tab" aria-controls="arrivals" aria-selected="false" class="">New Arrivals</a>
+        </li>
+        <li>
+            <a data-bs-toggle="tab" href="#onsale" role="tab" aria-controls="onsale" aria-selected="false" class="">On Sale</a>
+        </li>
+
+    </ul>
+
+    </div>
+    <div class="tab-content">
+      <div class="slick-slide slick-cloned slick-active" data-slick-index="-2" id="" aria-hidden="false" tabindex="-1" style="width: 226px;"><div><div class="custom-col-5" style="width: 100%; display: inline-block;">
+</div>
+</div>
+      </div>
+      </div>
+      
+<div class="row d-flex products  justify-content-center">
+<div class="product-item col-md-2 ">
+  <div class="item">
+<div class="item-content">
+<div class="item-img-discription ">
+<div class="item-img">
+<img src="assets/img/product7.webp" alt="" class="primary-img w-100">
+<img src="assets/img/product5.webp" alt="" class="secondary-img  w-100">
+<div>
+  <button type="button" class=" quick_button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Quick View
+     </button>
+</div>
+</div>
+<div class="product-description text-center pt-3">
+<h4>men potato chips</h4>
+<p>aliquam furniture</p>
+</div>
+<div class="line"></div>
+<div class="product-description-two d-flex flex-wrap  text-center justify-content-center pt-3">
+  <span class="price-one   me-2"  >$89.00</span>
+  <span class="price-two ">$75.00</span>
+</div>
+</div>
+<div class="shipping-description text-center pt-3">
+   <div class="stars text-warning text-center">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+
+  </div>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, delectus!</p>
+  <div class="line"></div>
+
+  <div class="add-buttons pt-4 text-light">
+    
+    
+    <button class="second-btn m-1 text-capitalize"> add to chart</button>
+
+
+
+ 
+</div>
+
+  </div>
+
+</div>
+
+
+
+</div>
+</div>
+
+
+<div class="product-item col-md-2 ">
+<div class="item">
+<div class="item-content">
+<div class="item-img">
+<img src="assets/img/product12.webp" alt="" class="primary-img w-100">
+<img src="assets/img/product12.webp" alt="" class="secondary-img  w-100">
+<div>
+<button type="button" class=" quick_button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Quick View
+ </button>
+</div>
+</div>
+<div class="product-description text-center pt-3">
+<h4>clothing,potato chips</h4>
+<p>donec eu furniture</p>
+</div>
+<div class="line"></div>
+<div class="product-description-two d-flex flex-wrap  text-center justify-content-center pt-3">
+<span class="price-one   me-2"  >$86.00</span>
+<span class="price-two ">$60.00</span>
+</div>
+
+<div class="shipping-description text-center pt-3">
+<div class="stars text-warning text-center">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+
+</div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, delectus!</p>
+<div class="line"></div>
+
+<div class="add-buttons pt-4 text-light">
+
+  
+
+<button class="second-btn m-1 text-capitalize"> add to chart</button>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+</div>
+
+
+<div class="product-item col-md-2 ">
+<div class="item">
+<div class="item-content">
+<div class="item-img">
+<img src="assets/img/product2.webp" alt="" class="primary-img w-100">
+<img src="assets/img/product2.webp" alt="" class="secondary-img  w-100">
+<div>
+<button type="button" class=" quick_button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Quick View
+ </button>
+</div>
+</div>
+<div class="product-description text-center pt-3">
+<h4>clothing,potato chips</h4>
+<p>aliquam furniture</p>
+</div>
+<div class="line"></div>
+<div class="product-description-two d-flex flex-wrap  text-center justify-content-center pt-3">
+<span class="price-one   me-2"  >$86.00</span>
+<span class="price-two ">$60.00</span>
+</div>
+
+<div class="shipping-description text-center pt-3">
+<div class="stars text-warning text-center">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+
+</div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, delectus!</p>
+<div class="line"></div>
+
+<div class="add-buttons pt-4 text-light">
+
+<button class="second-btn m-1 text-capitalize"> add to chart</button>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+</div>
+
+
+<div class="product-item col-md-2 ">
+<div class="item">
+<div class="item-content">
+<div class="item-img">
+<img src="assets/img/product5.webp" alt="" class="primary-img w-100">
+<img src="assets/img/product6.webp" alt="" class="secondary-img  w-100">
+<div>
+<button type="button" class=" quick_button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Quick View
+ </button>
+</div>
+</div>
+<div class="product-description text-center pt-3">
+<h4>women</h4>
+<p>furniture</p>
+</div>
+<div class="line"></div>
+<div class="product-description-two d-flex flex-wrap  text-center justify-content-center pt-3">
+<span class="price-one   me-2"  >$85.00</span>
+<span class="price-two ">$60.00</span>
+</div>
+
+<div class="shipping-description text-center pt-3">
+<div class="stars text-warning text-center">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+
+</div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, delectus!</p>
+<div class="line"></div>
+
+<div class="add-buttons  pt-4 text-light">
+
+
+<button class="second-btn m-1 text-capitalize"> add to chart</button>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+</div>
+
+
+<div class="product-item col-md-2 ">
+<div class="item">
+<div class="item-content">
+<div class="item-img">
+<img src="assets/img/product7.webp" alt="" class="primary-img w-100">
+<img src="assets/img/product10.webp" alt="" class="secondary-img  w-100">
+<div>
+<button type="button" class=" quick_button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Quick View
+ </button>
+</div>
+</div>
+<div class="product-description text-center pt-3">
+<h4>women</h4>
+<p>aliquam furniture</p>
+</div>
+<div class="line"></div>
+<div class="product-description-two d-flex flex-wrap  text-center justify-content-center pt-3">
+<span class="price-one   me-2"  >$80.00</span>
+<span class="price-two ">$60.00</span>
+</div>
+
+<div class="shipping-description text-center pt-3">
+<div class="stars text-warning text-center">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+
+</div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, delectus!</p>
+<div class="line"></div>
+
+<div class="add-buttons  pt-4 text-light">
+
+
+<button class="second-btn m-1 text-capitalize"> add to chart</button>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+</div>
+
+<div class="solve-the-overflow-proplem"></div>
+
+<div class="product-item col-md-2 my-4">
+<div class="item">
+<div class="item-content">
+<div class="item-img">
+<img src="assets/img/product11.webp" alt="" class="primary-img w-100">
+<img src="assets/img/product6.webp" alt="" class="secondary-img  w-100">
+<div>
+<button type="button" class=" quick_button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Quick View
+ </button>
+</div>
+</div>
+<div class="product-description text-center pt-3">
+<h4>women</h4>
+<p>duis pulvinar</p>
+</div>
+<div class="line"></div>
+<div class="product-description-two d-flex flex-wrap  text-center justify-content-center pt-3">
+
+<span class="price-two ">$60.00</span>
+</div>
+
+<div class="shipping-description text-center pt-3">
+<div class="stars text-warning text-center">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+
+</div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, delectus!</p>
+<div class="line"></div>
+
+<div class="add-buttons  pt-4 text-light">
+
+
+<button class="second-btn m-1 text-capitalize"> add to chart</button>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="product-item col-md-2 my-4 ">
+<div class="item">
+<div class="item-content">
+<div class="item-img">
+<img src="assets/img/product4.webp" alt="" class="primary-img w-100">
+<img src="assets/img/product5.webp" alt="" class="secondary-img  w-100">
+<div>
+<button type="button" class=" quick_button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Quick View
+ </button>
+</div>
+</div>
+<div class="product-description text-center pt-3">
+<h4>women</h4>
+<p>duis pulvinar</p>
+</div>
+<div class="line"></div>
+<div class="product-description-two d-flex flex-wrap  text-center justify-content-center pt-3">
+<span class="price-one   me-2"  >$86.00</span>
+<span class="price-two ">$60.00</span>
+</div>
+
+<div class="shipping-description text-center pt-3">
+<div class="stars text-warning text-center">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+
+</div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, delectus!</p>
+<div class="line"></div>
+
+<div class="add-buttons  pt-4 text-light">
+
+
+<button class="second-btn m-1 text-capitalize"> add to chart</button>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+</div>
+
+<div class="product-item col-md-2 my-4 ">
+<div class="item">
+<div class="item-content">
+<div class="item-img">
+<img src="assets/img/product.webp" alt="" class="primary-img w-100">
+<img src="assets/img/product4.webp" alt="" class="secondary-img  w-100">
+<div>
+<button type="button" class=" quick_button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Quick View
+ </button>
+</div>
+</div>
+<div class="product-description text-center pt-3">
+<h4>clothing,potato chips</h4>
+<p>dummy animals</p>
+</div>
+<div class="line"></div>
+<div class="product-description-two d-flex flex-wrap  text-center justify-content-center pt-3">
+<span class="price-two">$65.00</span>
+</div>
+
+<div class="shipping-description text-center pt-3">
+<div class="stars text-warning text-center">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+
+</div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, delectus!</p>
+<div class="line"></div>
+
+<div class="add-buttons pt-4 text-light">
+
+
+<button class="second-btn m-1 text-capitalize"> add to chart</button>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+</div>
+
+<div class="product-item col-md-2 my-4 ">
+<div class="item">
+<div class="item-content">
+<div class="item-img">
+<img src="assets/img/product7.webp" alt="" class="primary-img w-100">
+<img src="assets/img/product8.webp" alt="" class="secondary-img  w-100">
+<div>
+<button type="button" class=" quick_button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Quick View
+ </button>
+</div>
+</div>
+<div class="product-description text-center pt-3">
+<h4>men</h4>
+<p>letraset animal</p>
+</div>
+<div class="line"></div>
+<div class="product-description-two d-flex flex-wrap  text-center justify-content-center pt-3">
+<span class="price-one   me-2"  >$60.00</span>
+<span class="price-two ">$55.00</span>
+</div>
+
+<div class="shipping-description text-center pt-3">
+<div class="stars text-warning text-center">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+
+</div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, delectus!</p>
+<div class="line"></div>
+
+<div class="add-buttons  pt-4 text-light">
+
+
+<button class="second-btn m-1 text-capitalize"> add to chart</button>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+</div>
+          
+<div class="product-item col-md-2 my-4 ">
+<div class="item">
+<div class="item-content">
+<div class="item-img">
+<img src="assets/img/product12.webp" alt="" class="primary-img w-100">
+<img src="assets/img/product11.webp" alt="" class="secondary-img  w-100">
+<div>
+<button type="button" class=" quick_button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Quick View
+ </button>
+</div>
+</div>
+<div class="product-description text-center pt-3">
+<h4>clothing,potato chips</h4>
+<p>natural lorem ipsum</p>
+</div>
+<div class="line"></div>
+<div class="product-description-two d-flex flex-wrap  text-center justify-content-center pt-3">
+
+<span class="price-two ">$50.00</span>
+</div>
+
+<div class="shipping-description text-center pt-3">
+<div class="stars text-warning text-center">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+
+</div>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, delectus!</p>
+<div class="line"></div>
+
+<div class="add-buttons  pt-4 text-light">
+
+
+<button class="second-btn m-1 text-capitalize"> add to chart</button>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+</div>              
+            </div>
+  </div>
+ </section>
+<!--end Model for product overview -->
+<!--start banner-->
+<section>
+  
+  <div class="banner-sections d-flex">
+<p class="banner-p1">sale off 20% all products</p>
+<h2>new trending collection</h2>
+<p class="banner-p2">we believe that good design is always in season</p>
+<a href="shop.html">shopping Now</a>
+  </div>
+
+</section>
+<!--end banner -->
+
+<!--start blog-->
+<section class="blog-section">
+  <div class="container pb-5 ">
+    <div class="product-line-section  d-flex align-items-center">
+      <h2 class="pe-3 text-capitalize fs-3">monsta news</h2>
+      <div class="line w-75 me-2"></div>
+      <i class="fa-solid fa-angle-left fs-5 pe-2"></i>
+      <i class="fa-solid fa-angle-right fs-5 "></i>
+    </div>
+    <div class="row blog-items">
+      <div class="col-md-3 text-center">
+        <img src="assets/img/blog1.webp"class="">
+        <h3 class="text-capitalize  mt-3">blog image post</h3>
+        <p class="text-capitalize blog-par"> by <span class="text-span"> admin</span>  /30 oct 2018</p>
+        <p class=" blog-paragraph w-75 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam voluptates quia accusamus excepturi eum facere officia similique</p>
+        </div>
+<div class="col-md-3">
+  <img src="assets/img/blog2.webp"class="">
+  <h3 class="text-capitalize  mt-3">blog image post</h3>
+  <p class="text-capitalize blog-par"> by <span class="text-span"> admin</span>  /30 oct 2018</p>
+  <p class=" blog-paragraph w-75">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam voluptates quia accusamus excepturi eum facere officia similique</p>
+  </div>
+  <div class="col-md-3 ">
+    <img src="assets/img/blog3.webp"class="">
+    <h3 class="text-capitalize  mt-3">blog image post</h3>
+    <p class="text-capitalize blog-par"> by <span class="text-span"> admin</span>  /30 oct 2018</p>
+    <p class=" blog-paragraph w-75">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam voluptates quia accusamus excepturi eum facere officia similique</p>
+    </div>
+    <div class="col-md-3 ">
+      <img src="assets/img/blog2.webp"class="">
+      <h3 class="text-capitalize  mt-3">blog image post</h3>
+      <p class="text-capitalize blog-par"> by <span class="text-span"> admin</span>  /30 oct 2018</p>
+      <p class=" blog-paragraph w-75 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam voluptates quia accusamus excepturi eum facere officia similique</p>
+      </div>
+            
+    </div>
+    </div>
+</section>
+<!--end blog-->
+
+
+<!--newsletter area-->
+<section class="newsletter-area">
+<div class="container ">
+  <div class="instagram-area ">
+  
+  <div class="text-area">
+    <h3>Our Newsletterr</h3>
+<p class="text-secondary">Get E-mail updates about our latest shop and special offers.</p>
+<div class="form-list ">
+<input id="mc-email" class="input-form " type="email" autocomplete="off" placeholder="Email address..." name="EMAIL">
+<button type="button" class="newsletter-btn btn-dark text-light  text-capitalize">subscribe</button>
+
+</div>
+  </div>
+  </div>
+</div>
+</section>
+<!--newsletter end-->
+
+   <!-- start popup section -->
+   <section id="popupSection"> 
+   <div id="layout" class="b-modale__b-popup1" onclick="hidePop()"></div>
+   <div id="popup" class="newletter-popup">
+       <div id="boxes" class="newletter-container">
+         <div id="dialog" class="window">
+           <div id="popup2" onclick="hidePop()">
+             <span class="b-close">
+               <span>close</span>
+             </span>
+           </div>
+           <div class="box">
+             <div class="newletter-title">
+               <h2>Newsletter</h2>
+             </div>
+             <div class="box-content newletter-content">
+               <label class="newletter-label">
+                 "Enter your email address to subsicribe our notification of our new post & features by email."
+               </label>
+               <div id="frm-subscribe">
+                <form name="subscribe" id="subscribe_popup">
+                   <!-- <span class="required">*</span><span>Enter you email address here...</span> --> 
+              <input type="text" value="" name="subscribe_pemail" id="subscribe_pemail" placeholder="Enter you email address here...">
+                   <input type="hidden" value="" name="subscribe_pname" id="subscribe_pname"> 
+                  <div id="notification"></div>
+                  <a class="theme-btn-outlined" onclick="email_subscribepopup()"><span>Subscribe</span></a>
+          </form>
+          <div class="subscribe-bottom">
+            <input type="checkbox" id="dontShowAgain">
+            <label for="dontShowAgain">Don't show this popup again</label>
+        </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+   </div>
+  </section>-->
+   <!-- end popup section -->
+   
+
+<!--start footer-->
+<footer class="footer_widgets footer_black">
+  <div class="container">  
+      <div class="footer_top">
+          <div class="row">
+                  <div class="col-lg-4 col-md-6 col-sm-8">
+                      <div class="widgets_container contact_us">
+                          <h3>About Monsta</h3>
+                          <div class="footer_contact">
+                              <p>Address: Your address goes here.</p>
+                              <p>Phone: <a  class="phone" href="tel:0123456789">0123456789</a></p>
+                              <p>Email: demo@example.com</p>
+                              <ul >
+        <a href="#"><i class="font fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="font fa-brands fa-twitter"></i></a>
+        <a href="#"><i class=" font fa-solid fa-rss"></i></a>
+        <a href="#"><i class=" font fa-brands fa-google-plus-g"></i></a>
+        <a href="#"><i class="font fa-brands fa-youtube"></i></a> 
+                              </ul>
+
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-2 col-md-6 col-sm-4 col-6">
+                      <div class="widgets_container widget_menu">
+                          <h3>Information</h3>
+                          <div class="footer_menu">
+                              <ul>
+                                  <li><a href="about.html">About Us</a></li>
+                                  <li><a href="blog.html">blog</a></li>
+                                  <li><a href="contact.html">Contact</a></li>
+                                  <li><a href="#">Sample Page</a></li>
+                                  <li><a href="portfolio.html">Portfolio</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-lg-2 col-md-6 col-sm-5 col-6">
+                      <div class="widgets_container widget_menu">
+                          <h3>My Account</h3>
+                          <div class="footer_menu">
+                              <ul>
+                                  <li><a href="my-account.html">My Account</a></li>
+                                  <li><a href="contact.html">Contact</a></li>
+                                  <li><a href="wishlist.html">Wishlist</a></li>
+                                  <li><a href="portfolio.html">Portfolio</a></li>
+                                  <li><a href="checkout.html">Checkout</a></li>
+                                  <li><a href="faq.html">Frequently Questions</a></li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 col-sm-7">
+                      <div class="widgets_container product_widget">
+                          <h3>Top Rated Products</h3>
+                          <div class="simple_product">
+                              <div class="simple_product_items">
+                                  <div class="simple_product_thumb">
+                                      <a href="#"><img src="assets/img/product5.webp" alt=""></a>
+                                  </div>
+                                  <div class="simple_product_content">
+                                       <div class="tag_cate">
+                                          <a href="#">Clothing,</a>
+                                          <a href="#">Potato chips</a>
+                                      </div>
+                                      <div class="product_name">
+                                          <h3><a href="#">Donec eu animal</a></h3>
+                                      </div>
+                                      <div class="product_price">
+                                          <span class="old_price">$86.00</span>
+                                          <span class="current_price">$70.00</span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="simple_product_items">
+                                  <div class="simple_product_thumb">
+                                      <a href="#"><img src="assets/img/product6.webp" alt=""></a>
+                                  </div>
+                                  <div class="simple_product_content">
+                                       <div class="tag_cate">
+                                          <a href="#">Women</a>
+                                      </div>
+                                      <div class="product_name">
+                                          <h3><a href="#">Dummy animal</a></h3>
+                                      </div>
+                                      <div class="product_price">
+                                          <span class="old_price">$74.00</span>
+                                          <span class="current_price">$69.00</span>
+                                      </div>
+                                  </div>
+                              </div> 
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      </div>
+      <div class="footer_middel">
+          <div class="row">
+              <div class="col-12">
+                  <div class="footer_middel_menu">
+                      <ul>
+                          <li><a href="#">Home</a></li>
+                          <li><a href="#">Online Store</a></li>
+                          <li><a href="#">Promotion</a></li>
+                          <li><a href="#">Privacu Policy</a></li>
+                          <li><a href="#">Terms Of Use</a></li>
+                          <li><a href="#">Sitemap</a></li>
+                          <li><a href="#">Support</a></li>
+                          <li><a href="#">Contacts</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="footer_bottom">
+         <div class="row">
+              <div class="col-12">
+                  <div class="copyright_area">
+                      <p>© 2022 <a href="index.html" class="text-uppercase">MONSTA</a>. Made with <i class="fa fa-heart"></i> by <a target="_blank" href="https://www.hasthemes.com">PRO Team</a></p>
+                      <img src="assets/img/papyel2.webp" alt="">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>     
+</footer>
+
+<!--end footer-->
+
+  <!-- Model for product overview -->
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="item">
+          <div class="item-content">
+          <div class="item-img-discription ">
+          <div class="item-img">
+          <img src="assets/img/product7.webp" alt="" class="primary-img w-100">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end Model for product overview -->
+
+  
+  <!-- JQuery js -->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <!-- custom js -->
+    <script src="assets/js/main.js"></script>
+
+    
+</body>
+</html>

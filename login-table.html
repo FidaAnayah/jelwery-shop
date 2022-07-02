@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRO - Jewelry Shop</title>
+    <link rel="shortcut icon" href="assets/img/logo.jpeg">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- bootsrtap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+<body onload="displayData()">
+    <!-- sticky top -->
+<div class="header_bottom header-responsive p-lg-2">
+   
+  <div class="col-lg-2 col-md-3 col-4">
+      <div class="logo">
+          <a href="index.html">
+            <div class="logo-img-width">
+              <img src="assets/img/logo.webp" alt="">
+            </div>
+          </a>
+      </div>
+  </div>
+  <input type="checkbox" id="nav-toggle-second" class="nav-toggle-second" > 
+  
+  <ul class="nav justify-content-center" id="second-nav" >
+    <li class="nav-item">
+      <a class="nav-link homeLink" href="index.html">Home</a>
+    </li>
+    <li class="nav-item dropdown languages">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Pages
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="index.html">Rings Shop</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="index watch.html">Watches Shop</a></li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="index.html #weatherBox">Weather</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="about.html">About Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="contact.html">Contact Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="login.html">Login</a>
+    </li>
+  </ul>
+  
+  <label for="nav-toggle-second" class="nav-toggle-lable-second">
+    <span><i class="fa-solid fa-bars"></i></span>
+  </label>
+</div>
+<!-- end sticky top -->
+  <div class="container mt-5">
+    <div class="d-flex justify-content-center mb-4">
+      <button class="delte-all" id="deleteAll"> Delete All</button>
+     </div>
+    <table class="table table-striped table-hover border-top">
+        <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">client Name</th>
+              <th scope="col">client email</th>
+              <th scope="col">client Password</th>
+              <th scope="col"><SPan class="update-span">update</SPan></th>
+              <th scope="col"><SPan class="delete-span">delete</SPan></th>
+            </tr>
+          </thead>
+          <tbody id="data">
+            
+          </tbody>
+      </table>
+    </div>
+
+<!-- sucess -->
+<!-- <div class="container w-25">
+<div class="row">
+  <div class="check-image">
+    <img clss="w-100" src="assets/img/check1.jpg" alt="check" >
+  </div>
+<h3>Your changes have been updated successfully</h3>
+</div>
+</div> -->
+  
+    
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Up date client data</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="login-reg-form col-12">
+              <div class="form-border p-lg-2">
+                <div class="mb-3">
+                  <label for="userName" class="form-label">User Name</label>
+                  <input type="text" class="form-control inputs" id="userName" placeholder="user name">
+                </div>
+          <div class=" mb-3">
+              <label for="regEmail" class="form-label">Email address</label>
+              <input type="text" class="form-control" id="regEmail" placeholder="Example@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="regPassword" class="form-label">Password</label>
+              <input type="text" class="form-control" id="regPassword" placeholder="Password">
+            </div>
+          </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-form" onclick="updateData()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.3/sweetalert2.min.js" integrity="sha512-F3F53+tMh/CBxMQ60GN5R4EiFW7PcuND+9IDC3Qpkwc7SfxgzHigRdUO3+2+mNal2ot3Wp6KR0zx8r8BbsW+Bg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     
+     <!-- JQuery js -->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!-- custom js -->
+    <script src="assets/js/crud-table.js"></script>
+</body>
+</html>

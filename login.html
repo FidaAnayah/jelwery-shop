@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRO-Jewelry shop/login</title>
+    <link rel="shortcut icon" href="assets/img/logo.jpeg">
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- bootsrtap css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+     <!-- Sweet Alert -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.3.3/sweetalert2.css" rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+</head>
+<body >
+    <!-- sticky top -->
+<div class="header_bottom header-responsive p-lg-2">
+  
+    <div class="col-lg-2 col-md-3 col-4">
+        <div class="logo">
+            <a href="index.html">
+              <div class="logo-img-width">
+                <img src="assets/img/logo.webp" alt="">
+              </div>
+            </a>
+        </div>
+    </div>
+    <input type="checkbox" id="nav-toggle-second" class="nav-toggle-second" > 
+    <ul class="nav justify-content-center" id="second-nav">
+      <li class="nav-item">
+        <a class="nav-link homeLink" href="index.html">Home</a>
+      </li>
+      <li class="nav-item dropdown languages">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Pages
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="index.html">Rings Shop</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="index watch.html">Watches Shop</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html #weatherBox">Weather</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact.html">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="login.html">Login</a>
+      </li>
+    </ul>
+    <label for="nav-toggle-second" class="nav-toggle-lable-second">
+      <span><i class="fa-solid fa-bars"></i></span>
+    </label>
+  </div>
+  <!-- end sticky top -->
+<div class="container">
+    <div class="row">
+        <div class="login-tab">
+            <div class="login-tab-head">
+                <h1>My Account</h1>
+            </div>
+            <div class="home-link">
+                <a href="index.html">Home</a> <span> > </span> <span>my Account</span>
+            </div>
+        </div>
+       
+    </div>
+</div>
+ 
+
+    <div class="container">
+       
+        <div class="row ">
+            <div class="login-reg-form  col-lg-6 col-sm-12  ">
+            <h2>login</h2>
+            <div class="form-border  p-5 ">
+               <form onsubmit="loginFun()" action="index.html"> 
+            <div class=" mb-3">
+                <label for="loginUserName" class="form-label">User Name</label>
+                <input type="text" class="form-control" id="loginUserName" placeholder="user name">
+              </div>
+              <div class="mb-3">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input type="text" class="form-control" id="loginPassword" placeholder="Password">
+              </div>
+              <div class="login-reg-btn">
+                <p id="loginResult"></p>
+                <input type="submit" value="Login Now" class="btn-form ">
+                
+              </div>
+              <div class="pt-5 ">
+                <button type="button" class="btn upBtn login-forget-pass" id="forget-pass" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick = getData(index)>
+                  forget Password?
+                </button>
+                
+              </div>
+             </form> 
+            </div>
+        </div>
+        <div class="login-reg-form  col-lg-6 col-12  ">
+            <h2>Register</h2>
+           <div class="form-border p-5">
+            <form onsubmit="signup()" action="index.html">
+              <div class="mb-3">
+                <label for="userName" class="form-label">User Name</label>
+                <input type="text" class="form-control inputs" id="userName" placeholder="user name">
+              </div>
+            <div class="mb-3">
+                <label for="regEmail" class="form-label" >Email address</label>
+                <input type="text" class="form-control inputs" id="regEmail" placeholder="Example@example.com">
+              </div>
+              <div class="mb-3">
+                <label for="regPassword" class="form-label">Password</label>
+                <input type="text" class="form-control inputs" id="regPassword" placeholder="Password">
+              </div>
+              <div class="login-reg-btn">
+                <input type="submit" value="regist now" id="register" class="btn-form">
+              </div>
+            </form>
+           </div>
+        </div>
+
+    </div>
+    </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Up date client data</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="login-reg-form col-12">
+              <div class="form-border p-lg-2">
+                <div class=" mb-3">
+                <label for="loginUserNameModel" class="form-label">User Name</label>
+                <input type="text" class="form-control" id="loginUserNameModel" placeholder="user name">
+              </div>
+              <div class="mb-3">
+              <label for="loginPasswordModel" class="form-label">Password</label>
+              <input type="text" class="form-control" id="loginPasswordModel" placeholder="Password">
+            </div>
+          </div>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-form" onclick="updateData()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+     <!-- JQuery js -->
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <!-- custom js -->
+    <script src="assets/js/crud-login.js"></script>
+</body>
+</html>
